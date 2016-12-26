@@ -1,4 +1,4 @@
-FROM node:0.10
+FROM node:latest
 
 RUN apt-get update && apt-get -qqy install nano
 
@@ -8,7 +8,6 @@ RUN npm cache clean && npm install iobroker
 ADD scripts/run.sh /opt/iobroker/run.sh
 RUN echo $(hostname) >.install_host
 
-EXPOSE 9876
+EXPOSE 8081
 
 CMD /opt/iobroker/run.sh
-CMD /opt/iobroker add admin --enabled --port 9876
