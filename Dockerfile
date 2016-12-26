@@ -10,5 +10,5 @@ RUN echo $(hostname) >.install_host
 
 EXPOSE 9876
 
-CMD /opt/iobroker add admin --enabled --port 9876
 CMD /opt/iobroker/run.sh
+CMD /opt/iobroker add admin --enabled --port 9876
